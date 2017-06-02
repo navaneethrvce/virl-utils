@@ -3,10 +3,10 @@
 import os, requests, sys
 
 def launch_topo(topofilename):
-	virl_host = "172.16.1.1"
+	virl_host = "172.16.238.251"
 	username  = password = "guest"
 	url       = "http://%s:19399/simengine/rest/launch" % virl_host
-	topo      = open(topofilename, 'r')
+	topo      = open(topofilename, 'r').read()
 	headers   = {'content-type': 'text/xml'}
 	payload   = {'file': 'manual@launch_topo'}
 
